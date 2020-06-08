@@ -1,0 +1,35 @@
+Newman Installation
+Install Node
+npm install -g newman
+npm init --> inside the folder where the project has to be created
+Hit enter for everything and just provide author name
+npm install newman --save
+remove node modules --> 
+Edit package.json
+remove the "main" line
+modify the "test" line to anything like 
+remove the license line
+Commit the files to git
+Create a pipeline in jenkins
+In pipeline script space type the below code
+node{
+	stage('Postman tests'){
+		git 'https://github.com/karthick-git/Newman-Jenkins.git'
+		sh 'npm install'
+		sh 'npm run <test name under scripts from package.json> (here api-tests)
+}
+
+Final Version:
+node{
+	stage('Postman tests'){
+		git 'https://github.com/karthick-git/Newman-Jenkins.git'
+		sh 'npm install'
+		try{
+		    sh 'npm run api-tests'
+		    currentBuild.result = 'SUCCESS'
+		}catch(Exception ex){
+		    currentBuild.result = 'FAILURE/EXITED'
+		}
+		junit 'report.xml'
+	}
+}
