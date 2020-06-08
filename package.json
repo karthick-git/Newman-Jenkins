@@ -4,7 +4,7 @@
   "description": "Newman Automation",
  
   "scripts": {
-    "api-tests" : "newman run newmanTest.postman_collection.json"
+    "api-tests" : "newman run newmanTest.postman_collection.json --reporter-junit-export report.xml"
   },
   "author": "Karthick Srinivasan",
   "license": "ISC",
