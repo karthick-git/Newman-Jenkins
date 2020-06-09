@@ -94,7 +94,7 @@
 					"script": {
 						"type": "text/javascript",
 						"exec": [
-							"tests[\"Status code is 200\"] = responseCode.code === 500;"
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
 						],
 						"id": "21bdef0c-9548-4317-b908-dd169d3e9de3"
 					}
