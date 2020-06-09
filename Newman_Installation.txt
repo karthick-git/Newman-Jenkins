@@ -44,7 +44,7 @@ http://localhost:8080/git/notifyCommit?url=<Git project URL>
 Create a file called post-commit without any extension inside the project's .git--> hooks folder
 and paste the below lines of code
 #!/bin/sh
-curl http://localhost:8080/git/notifyCommit?url=<Git project URL>
+curl http://localhost:8080/git/notifyCommit?url=<Git project URL>.
 
 
 
