@@ -1,4 +1,5 @@
-Newman Installation
+Newman Installation Steps
+
 Install Node
 npm install -g newman
 npm init --> inside the folder where the project has to be created
